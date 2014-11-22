@@ -14,13 +14,14 @@
 		32A04D371A1BF55600027413 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A04D361A1BF55600027413 /* main.m */; };
 		32A04D3B1A1BF55600027413 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A04D3A1A1BF55600027413 /* DSAppDelegate.m */; };
 		32A04D3E1A1BF55600027413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A04D3C1A1BF55600027413 /* Main.storyboard */; };
-		32A04D411A1BF55600027413 /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A04D401A1BF55600027413 /* DSViewController.m */; };
 		32A04D431A1BF55600027413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A04D421A1BF55600027413 /* Images.xcassets */; };
 		32A04D4A1A1BF55700027413 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A04D491A1BF55700027413 /* XCTest.framework */; };
 		32A04D4B1A1BF55700027413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A04D2A1A1BF55600027413 /* Foundation.framework */; };
 		32A04D4C1A1BF55700027413 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A04D2E1A1BF55600027413 /* UIKit.framework */; };
 		32A04D541A1BF55700027413 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32A04D521A1BF55700027413 /* InfoPlist.strings */; };
 		32A04D561A1BF55700027413 /* PhotoGaleryEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A04D551A1BF55700027413 /* PhotoGaleryEditTests.m */; };
+		32A04D611A1BFC5C00027413 /* DSViewControllerMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A04D601A1BFC5C00027413 /* DSViewControllerMain.m */; };
+		32A04D641A1C028F00027413 /* DSViewControllerEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A04D631A1C028F00027413 /* DSViewControllerEditor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		32A04D391A1BF55600027413 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
 		32A04D3A1A1BF55600027413 /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
 		32A04D3D1A1BF55600027413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32A04D3F1A1BF55600027413 /* DSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
-		32A04D401A1BF55600027413 /* DSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
 		32A04D421A1BF55600027413 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32A04D481A1BF55700027413 /* PhotoGaleryEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGaleryEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A04D491A1BF55700027413 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		32A04D511A1BF55700027413 /* PhotoGaleryEditTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhotoGaleryEditTests-Info.plist"; sourceTree = "<group>"; };
 		32A04D531A1BF55700027413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32A04D551A1BF55700027413 /* PhotoGaleryEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGaleryEditTests.m; sourceTree = "<group>"; };
+		32A04D5F1A1BFC5C00027413 /* DSViewControllerMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewControllerMain.h; sourceTree = "<group>"; };
+		32A04D601A1BFC5C00027413 /* DSViewControllerMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewControllerMain.m; sourceTree = "<group>"; };
+		32A04D621A1C028F00027413 /* DSViewControllerEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewControllerEditor.h; sourceTree = "<group>"; };
+		32A04D631A1C028F00027413 /* DSViewControllerEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewControllerEditor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,10 @@
 		32A04D1E1A1BF55600027413 = {
 			isa = PBXGroup;
 			children = (
+				32A04D621A1C028F00027413 /* DSViewControllerEditor.h */,
+				32A04D631A1C028F00027413 /* DSViewControllerEditor.m */,
+				32A04D5F1A1BFC5C00027413 /* DSViewControllerMain.h */,
+				32A04D601A1BFC5C00027413 /* DSViewControllerMain.m */,
 				32A04D301A1BF55600027413 /* PhotoGaleryEdit */,
 				32A04D4F1A1BF55700027413 /* PhotoGaleryEditTests */,
 				32A04D291A1BF55600027413 /* Frameworks */,
@@ -115,8 +122,6 @@
 				32A04D391A1BF55600027413 /* DSAppDelegate.h */,
 				32A04D3A1A1BF55600027413 /* DSAppDelegate.m */,
 				32A04D3C1A1BF55600027413 /* Main.storyboard */,
-				32A04D3F1A1BF55600027413 /* DSViewController.h */,
-				32A04D401A1BF55600027413 /* DSViewController.m */,
 				32A04D421A1BF55600027413 /* Images.xcassets */,
 				32A04D311A1BF55600027413 /* Supporting Files */,
 			);
@@ -250,8 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A04D641A1C028F00027413 /* DSViewControllerEditor.m in Sources */,
+				32A04D611A1BFC5C00027413 /* DSViewControllerMain.m in Sources */,
 				32A04D371A1BF55600027413 /* main.m in Sources */,
-				32A04D411A1BF55600027413 /* DSViewController.m in Sources */,
 				32A04D3B1A1BF55600027413 /* DSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +463,7 @@
 				32A04D5B1A1BF55700027413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32A04D5C1A1BF55700027413 /* Build configuration list for PBXNativeTarget "PhotoGaleryEditTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +472,7 @@
 				32A04D5E1A1BF55700027413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
