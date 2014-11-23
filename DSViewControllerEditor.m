@@ -89,7 +89,7 @@
                 }
             }
             else {
-            [asset writeModifiedImageDataToSavedPhotosAlbum:data metadata:[[asset defaultRepresentation] metadata] completionBlock:^(NSURL *assetURL, NSError *error) {
+            [asset writeModifiedImageDataToSavedPhotosAlbum:data metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
                     if (assetURL == nil)
                         NSLog(@"Error: %@",[error localizedDescription]);
                         }];
