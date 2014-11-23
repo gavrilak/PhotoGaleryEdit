@@ -82,13 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		32A04D1E1A1BF55600027413 = {
+		329F25E61A2288D00095F6A5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				32A04D621A1C028F00027413 /* DSViewControllerEditor.h */,
 				32A04D631A1C028F00027413 /* DSViewControllerEditor.m */,
 				32A04D5F1A1BFC5C00027413 /* DSViewControllerMain.h */,
 				32A04D601A1BFC5C00027413 /* DSViewControllerMain.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		32A04D1E1A1BF55600027413 = {
+			isa = PBXGroup;
+			children = (
+				329F25E61A2288D00095F6A5 /* Controllers */,
 				32A04D301A1BF55600027413 /* PhotoGaleryEdit */,
 				32A04D4F1A1BF55700027413 /* PhotoGaleryEditTests */,
 				32A04D291A1BF55600027413 /* Frameworks */,

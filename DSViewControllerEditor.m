@@ -9,9 +9,10 @@
 #import "DSViewControllerEditor.h"
 
 
-@interface DSViewControllerEditor (){
-    UIImage *newImage;
-}
+@interface DSViewControllerEditor ()
+
+@property (strong, nonatomic) UIImage *nImage;
+
 @end
 
 @implementation DSViewControllerEditor
@@ -31,6 +32,7 @@
     // Do any additional setup after loading the view.
     [self.imageView setImage:self.image];
     [[[self.tabBar items] objectAtIndex:4] setEnabled:FALSE];
+    
     UIBarButtonItem* done =
     [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                   target:self
@@ -53,7 +55,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-- (UIImage*) scaledImage: (UIImage*) image toSize: (CGSize) size {
+- (UIImage*) scaleImage: (UIImage*) image toSize: (CGSize) size {
     
     UIGraphicsBeginImageContextWithOptions(size, NO, 1.0);
     [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
@@ -74,11 +76,17 @@
            
             if(bReplace){
                 if([asset isEditable]){
-                    [asset setImageData:data metadata:[[asset defaultRepresentation] metadata] completionBlock:^(NSURL *assetURL, NSError *error) {
-                   if (assetURL == nil)
-                       NSLog(@"Error: %@",[error localizedDescription]);
+                    [asset setImageData:data metadata:nil
+                    completionBlock:^(NSURL *assetURL, NSError *error) {
+                        if (assetURL == nil)
+                            NSLog(@"Error: %@",[error localizedDescription]);
                     }];
                     }
+                else{
+                    
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application does not have permissions to replace this image" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok",nil];
+                    [alert show];
+                }
             }
             else {
             [asset writeModifiedImageDataToSavedPhotosAlbum:data metadata:[[asset defaultRepresentation] metadata] completionBlock:^(NSURL *assetURL, NSError *error) {
@@ -106,18 +114,18 @@
     switch (item.tag)
     {
         case 1:
-            newImage =[self scaledImage:self.image toSize:CGSizeMake(1632, 1224)];
+            self.nImage =[self scaleImage:self.image toSize:CGSizeMake(1632, 1224)];
             break;
         case 2:
-            newImage =[self scaledImage:self.image toSize:CGSizeMake(1280, 960)];
+            self.nImage =[self scaleImage:self.image toSize:CGSizeMake(1280, 960)];
             break;
         case 3:
             
-            newImage =[self scaledImage:self.image toSize:CGSizeMake(640, 480)];
+            self.nImage =[self scaleImage:self.image toSize:CGSizeMake(640, 480)];
             break;
         case 4:
             
-           sendImage = newImage;
+           sendImage = self.nImage;
             UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
                                                                 initWithActivityItems:@[ sendImage] applicationActivities:nil];
             activityViewController.excludedActivityTypes=@[UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypePostToWeibo,UIActivityTypePrint,UIActivityTypeSaveToCameraRoll];
@@ -138,10 +146,10 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        [self saveImageToPhotoLibrary:newImage  replace:NO];
+        [self saveImageToPhotoLibrary:self.nImage  replace:NO];
    }
     else if (buttonIndex == 1) {
-        [self saveImageToPhotoLibrary:newImage  replace:YES];
+        [self saveImageToPhotoLibrary:self.nImage  replace:YES];
     }
    [[[self.tabBar items] objectAtIndex:4] setEnabled:YES];
    [self.navigationBarItem.rightBarButtonItem  setEnabled:YES];

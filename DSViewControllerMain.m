@@ -40,7 +40,6 @@
 }
 
 
-
 - (IBAction)galleryButtonPressed:(id)sender {
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -52,6 +51,7 @@
 }
 
 #pragma mark - UIImagePickerControllerDelegate
+
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>36CA32A1-D9E8-4FE7-824D-A8B750AF23E2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PhotoGaleryEdit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E814155C-991D-44B5-B840-F40C56A9E1EB</key>
+		<string>https://github.com/gavrilak/PhotoGaleryEdit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhotoGaleryEdit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E814155C-991D-44B5-B840-F40C56A9E1EB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gavrilak/PhotoGaleryEdit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E814155C-991D-44B5-B840-F40C56A9E1EB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E814155C-991D-44B5-B840-F40C56A9E1EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhotoGaleryEdit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
